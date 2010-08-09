@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.mjdev.dual_clock"
+      android:versionCode="15"
+      android:versionName="1.2">
+    <application android:icon="@drawable/dual_clock_icon" android:label="@string/dual_clock_name">
+    	<service android:name="dual_clock$dual_clock_service"/>
+		<receiver 
+			android:label="@string/dual_clock_name" 
+			android:name=".dual_clock" 
+			android:icon="@drawable/dual_clock_icon">
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+				<!--
+           	   	<action android:name="android.intent.action.SCREEN_OFF"/>
+               	<action android:name="android.intent.action.SCREEN_ON"/>
+            	<action android:name="android.intent.action.TIME_TICK"/>
+           	   	<action android:name="android.intent.action.TIME_SET"/>
+           	   	<action android:name="android.intent.action.BATTERY_LOW"/>
+              	<action android:name="android.intent.action.DATE_CHANGED"/>
+               	<action android:name="android.intent.action.LOCALE_CHANGED"/>
+               	<action android:name="android.intent.action.PHONE_STATE"/>
+               	<action android:name="android.intent.action.PROVIDER_CHANGED"/>
+               	<action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+				<action android:name="android.net.wifi.STATE_CHANGE"/>
+				<action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE"/>
+				<action android:name="android.net.wifi.supplicant.STATE_CHANGE"/>
+				<action android:name="com.google.gservices.intent.action.GSERVICES_CHANGED"/>
+				<action android:name="com.google.gservices.intent.action.GSERVICES_OVERRIDE"/>
+               	-->
+			</intent-filter>
+			<meta-data 
+				android:name="android.appwidget.provider"
+				android:resource="@xml/dual_clock_4x2" />
+		</receiver>
+    </application>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+	<uses-permission android:name="android.permission.CONTROL_LOCATION_UPDATES"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-sdk android:minSdkVersion="7" />
+</manifest> 
