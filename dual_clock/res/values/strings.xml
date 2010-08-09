@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dual_clock_name">digital clock</string>
+    <string name="template_user_agent">"%s/%s (Linux; Android)"</string>
+</resources>

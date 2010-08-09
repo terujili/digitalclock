@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content" 
+    android:layout_width="wrap_content" 
+    android:layout_gravity="center_horizontal">
+	<RelativeLayout 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content">    
+		<LinearLayout 
+			android:background="@drawable/dual_clock_widget_bg" 
+			android:layout_alignParentTop="true" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:gravity="center" 
+			android:id="@+id/widgetbg"/>
+		<LinearLayout 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:id="@+id/minutes" 
+			android:layout_toRightOf="@+id/hours" 
+			android:layout_marginLeft="46dp" 
+			android:layout_marginTop="16dp">
+			<ImageView 
+				android:id="@+id/m_10" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/dual_clock_number_0" />
+			<ImageView 
+				android:id="@+id/m_1" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/dual_clock_number_0" />
+		</LinearLayout>
+		<LinearLayout 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_alignParentLeft="true" 
+			android:layout_alignParentTop="true" 
+			android:layout_marginTop="16dp" 
+			android:layout_marginLeft="26dp" 
+			android:id="@+id/hours">
+			<ImageView 
+				android:id="@+id/h_10" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/dual_clock_number_0" />
+			<ImageView 
+				android:id="@+id/h_1" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:src="@drawable/dual_clock_number_0" />
+		</LinearLayout>
+		<LinearLayout android:layout_height="48dp" android:layout_width="48dp" android:id="@+id/weathe_l" android:layout_below="@+id/minutes" android:layout_marginLeft="172dp" android:layout_marginTop="16dp" android:clickable="true"><ImageView android:id="@+id/wicon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:minHeight="48dp" android:maxWidth="48dp" android:maxHeight="48dp" android:drawingCacheQuality="high" android:src="@drawable/dual_clock_icon" /></LinearLayout><ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="48dp" android:minHeight="48dp" android:maxWidth="48dp" android:maxHeight="48dp" android:id="@+id/weather_mask" android:src="@drawable/dual_clock_weather_mask" android:layout_marginLeft="172dp" android:layout_marginTop="16dp" android:layout_below="@+id/minutes"/><TextView 
+			android:textStyle="bold" 
+			android:id="@+id/location" 
+			android:gravity="center_vertical" 
+			android:textColor="#ffffff" 
+			android:layout_below="@+id/minutes" 
+			android:layout_height="wrap_content" 
+			android:layout_centerHorizontal="true" 
+			android:layout_marginTop="20dp" 
+			android:text="-" 
+			android:lines="1" 
+			android:layout_width="wrap_content" 
+			android:textSize="16dp" />
+		<TextView 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_below="@+id/location" 
+			android:id="@+id/date" 
+			android:textStyle="bold" 
+			android:textColor="#ffffff" 
+			android:lines="1" 
+			android:layout_marginTop="10dp" 
+			android:textSize="12dp" 
+			android:layout_marginLeft="10dp" 
+			android:text="-" />
+		
+		<TextView 
+			android:id="@+id/temperature" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_below="@+id/minutes" 
+			android:textColor="#ffffff" 
+			android:textStyle="bold" 
+			android:textSize="20dp" 
+			android:text="-" 
+			android:gravity="center" 
+			android:minWidth="48dp" 
+			android:maxWidth="48dp" 
+			android:maxLines="1" 
+			android:lines="1" 
+			android:layout_marginLeft="172dp" 
+			android:shadowColor="#000000" 
+			android:shadowDx="1.2" 
+			android:shadowDy="1.2" 
+			android:shadowRadius="3.0"
+			android:layout_marginTop="22dp"/>
+		<TextView 
+			android:id="@+id/wconditions" 
+			android:layout_width="wrap_content" 
+			android:layout_height="wrap_content" 
+			android:layout_below="@+id/temperature" 
+			android:textColor="#ffffff" 
+			android:textStyle="bold" 
+			android:text="-" 
+			android:gravity="center" 
+			android:minWidth="48dp" 
+			android:layout_marginTop="1dp" 
+			android:maxWidth="48dp" 
+			android:maxLines="1" 
+			android:lines="1" 
+			android:layout_marginLeft="172dp" 
+			android:shadowColor="#000000" 
+			android:shadowDx="1.2" 
+			android:shadowDy="1.2" 
+			android:shadowRadius="3.0"
+			android:textSize="10dp"/>
+		<TextView 
+			android:layout_height="wrap_content" 
+			android:layout_marginTop="60dp" 
+			android:id="@+id/ampm" 
+			android:layout_marginLeft="98dp" 
+			android:layout_width="30dp" 
+			android:gravity="center" 
+			android:textStyle="bold" 
+			android:textColor="#ffffff"/>
+	
+</RelativeLayout>
+</LinearLayout>
